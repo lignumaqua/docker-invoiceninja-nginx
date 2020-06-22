@@ -1,8 +1,6 @@
 # InvoiceNinja + Nginx + Cron Docker Bundle
 
-[![Automated](https://img.shields.io/docker/automated/digitalcanvasdesign/invoiceninja-nginx.svg)](https://hub.docker.com/r/digitalcanvasdesign/invoiceninja-nginx/)
-[![Build](https://img.shields.io/docker/build/digitalcanvasdesign/invoiceninja-nginx.svg)](https://hub.docker.com/r/digitalcanvasdesign/invoiceninja-nginx/)
-[![Image Size](https://img.shields.io/microbadger/image-size/digitalcanvasdesign/invoiceninja-nginx.svg)](https://hub.docker.com/r/digitalcanvasdesign/invoiceninja-nginx/)
+Lignumaqua - Forked and restricted to the 4.x builds on Invoice Ninja - DigitalCanvasDesign did all the hard work!
 
 The main container provided by [Invoice Ninja](https://github.com/invoiceninja/dockerfiles/blob/master/Dockerfile) only includes the base project. It does not provide a running cron job or web server. I prefer to run this project with all the necessary parts bundled in a single container. 
 
@@ -15,8 +13,8 @@ Mount volume for cron and web sserver logs.
 
 ### References
 
-- We extends this base image: [https://hub.docker.com/r/invoiceninja/invoiceninja/](https://hub.docker.com/r/invoiceninja/invoiceninja/)
-- [https://hub.docker.com/r/digitalcanvasdesign/invoiceninja-nginx/](https://hub.docker.com/r/digitalcanvasdesign/invoiceninja-nginx/)
+- We extend this base image: [https://hub.docker.com/r/invoiceninja/invoiceninja/](https://hub.docker.com/r/invoiceninja/invoiceninja/)
+- [https://hub.docker.com/r/lignumaqua/invoiceninja-nginx/](https://hub.docker.com/r/lignumaqua/invoiceninja-nginx/)
 - [https://github.com/invoiceninja/dockerfiles/tree/master/docker-compose](https://github.com/invoiceninja/dockerfiles/tree/master/docker-compose)
 
 ### Docker-compose
@@ -51,7 +49,7 @@ services:
       MYSQL_PASSWORD: mypassword
 
   invoice:
-    image: digitalcanvasdesign/invoiceninja-nginx
+    image: lignumaqua/invoiceninja-nginx
     build: .
     volumes:
     - ./storage:/var/www/app/storage

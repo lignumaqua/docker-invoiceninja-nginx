@@ -1,4 +1,4 @@
-FROM invoiceninja/invoiceninja:4.5.18
+FROM invoiceninja/invoiceninja:4.5.19
 
 LABEL maintainer="Jason Raimondi <jason@raimondi.us>"
 
